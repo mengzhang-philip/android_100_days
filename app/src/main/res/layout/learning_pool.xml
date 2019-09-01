@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.learningpool.LearningPoolActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/learning_pool"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/go_to_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:background="#3ff878"
+                android:text="List View" />
+
+
+            <Button
+                android:id="@+id/go_to_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:background="#3ff878"
+                android:text="Scroll View" />
+
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/go_to_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#3ff878"
+                android:text="Fragment" />
+
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/go_to_recycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#3ff878"
+                android:text="Recycle View" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/go_to_organic_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#3ff878"
+                android:text="Organic List View" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/go_to_organic_crud_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#3ff878"
+                android:text="CRUD List View" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/go_to_organic_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#3ff878"
+                android:text="Real Scroll View" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/go_to_widget_view"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#3ff878"
+                android:text="Widget View" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/go_to_shared_preference"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#3ff878"
+                android:text="Shared Preference" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

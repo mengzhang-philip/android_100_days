@@ -108,6 +108,28 @@
         android:layout_above="@id/div_tab_bar"
         android:id="@+id/ly_content">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300px"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/navigation_to_uzi"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:text="@string/navigation_to_uzi" />
+
+            <Button
+                android:id="@+id/navigation_to_alibaba"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Alibaba"/>
+
+        </LinearLayout>
+
     </FrameLayout>
 
 </RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="testMyArray">
+        <item>Feast</item>
+        <item>Goldeneye</item>
+        <item>CherryPi</item>
+        <item>AutoPilot</item>
+        <item>FastGear</item>
+        <item>GT</item>
+        <item>Others</item>
+    </string-array>
+</resources>
