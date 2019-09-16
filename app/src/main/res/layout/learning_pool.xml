@@ -89,6 +89,39 @@
                 android:layout_height="70dp"
                 android:background="#3ff878"
                 android:text="Shared Preference" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/go_to_download_img"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#3ff878"
+                android:text="Download Img" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/go_to_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#3ff878"
+                android:text="Recycler View" />
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/go_to_double_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#3ff878"
+                android:text="Double Recycler View" />
+
+            <AnalogClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <DigitalClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
         </LinearLayout>
     </ScrollView>
 

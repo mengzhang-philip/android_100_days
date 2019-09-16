@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.flashlight.FrameLayoutActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/view_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="400dp"
+            android:height="400dp"
+            android:background="#f00"/>
+
+        <TextView
+            android:id="@+id/view_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="360dp"
+            android:height="360dp"
+            android:background="#0f0"/>
+
+        <TextView
+            android:id="@+id/view_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="320dp"
+            android:height="320dp"
+            android:background="#00f"/>
+
+        <TextView
+            android:id="@+id/view_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="280dp"
+            android:height="280dp"
+            android:background="#ff0"/>
+
+        <TextView
+            android:id="@+id/view_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="240dp"
+            android:height="240dp"
+            android:background="#f0f"/>
+
+        <TextView
+            android:id="@+id/view_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="200dp"
+            android:height="200dp"
+            android:background="#0ff"/>
+
+        <TextView
+            android:id="@+id/view_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="160dp"
+            android:height="160dp"
+            android:background="#f98"/>
+
+        <TextView
+            android:id="@+id/view_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="120dp"
+            android:height="120dp"
+            android:background="#211"/>
+
+        <TextView
+            android:id="@+id/view_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="80dp"
+            android:height="80dp"
+            android:background="#770"/>
+
+        <TextView
+            android:id="@+id/view_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:width="40dp"
+            android:height="40dp"
+            android:background="#fff"/>
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

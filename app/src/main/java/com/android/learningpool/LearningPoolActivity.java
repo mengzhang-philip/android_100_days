@@ -5,12 +5,18 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
+import com.android.doublerecycleview.DoubleRecycleViewActivity;
+import com.android.flashlight.FrameLayoutActivity;
+import com.android.followball.CustomView;
 import com.android.hideonbush.R;
 import com.android.listview.ContactsListActivity;
 import com.android.listview.ListViewActivity;
 import com.android.listview.organiclistview.ListViewDataCRUDActivity;
 import com.android.listview.organiclistview.OrganicListViewAdapter;
+import com.android.loadinternetimg.GlideLoadImgActivity;
+import com.android.recycleview.RecycleViewActivity;
 import com.android.scrollview.ScrollViewActivity;
 import com.android.sharedpreference.SharedPreferenceActivity;
 import com.android.widget.WidgetMainActivity;
@@ -18,7 +24,8 @@ import com.android.widget.WidgetMainActivity;
 public class LearningPoolActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mBtnGoToListView, mBtnGoToScrollView, mBtnGoToFragment, mBtnGoToRecycleView, mBtnGoToOrganicListView,
-            mBtnGoToCRUD, mBtnGoToSRealcrollView , mBtnGoToWidget, mBtnGotoSharedPreferenece;
+            mBtnGoToCRUD, mBtnGoToSRealcrollView , mBtnGoToWidget, mBtnGotoSharedPreferenece, mBtnDownLoadImg, mBtnGoToRecyclerView,
+            mBtnGoToDoubleRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +49,9 @@ public class LearningPoolActivity extends AppCompatActivity implements View.OnCl
         mBtnGoToSRealcrollView = findViewById(R.id.go_to_organic_scroll_view);
         mBtnGoToWidget = findViewById(R.id.go_to_widget_view);
         mBtnGotoSharedPreferenece = findViewById(R.id.go_to_shared_preference);
+        mBtnDownLoadImg = findViewById(R.id.go_to_download_img);
+        mBtnGoToRecyclerView = findViewById(R.id.go_to_recycler_view);
+        mBtnGoToDoubleRecyclerView = findViewById(R.id.go_to_double_recycler_view);
     }
 
     private void initListener() {
@@ -54,7 +64,9 @@ public class LearningPoolActivity extends AppCompatActivity implements View.OnCl
         mBtnGoToSRealcrollView.setOnClickListener(this);
         mBtnGoToWidget.setOnClickListener(this);
         mBtnGotoSharedPreferenece.setOnClickListener(this);
-
+        mBtnDownLoadImg.setOnClickListener(this);
+        mBtnGoToRecyclerView.setOnClickListener(this);
+        mBtnGoToDoubleRecyclerView.setOnClickListener(this);
     }
 
     @Override
@@ -90,6 +102,18 @@ public class LearningPoolActivity extends AppCompatActivity implements View.OnCl
 
             case R.id.go_to_shared_preference:
                 startActivity(new Intent(this, SharedPreferenceActivity.class));
+                break;
+
+            case R.id.go_to_download_img:
+                startActivity(new Intent(this, GlideLoadImgActivity.class));
+                break;
+
+            case R.id.go_to_recycler_view:
+                startActivity(new Intent(this,RecycleViewActivity.class));
+                break;
+
+            case R.id.go_to_double_recycler_view:
+                startActivity(new Intent(this, FrameLayoutActivity.class));
                 break;
         }
     }

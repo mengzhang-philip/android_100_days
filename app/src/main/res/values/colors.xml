@@ -9,4 +9,16 @@
     <color name="text_gray">#000000</color>
     <color name="transparent">#4F4F4F</color>
     <color name="bg_white">#FFFFFF</color>
+
+    <color name="color_1">#f00</color>
+    <color name="color_2">#0f0</color>
+    <color name="color_3">#00f</color>
+    <color name="color_4">#ff0</color>
+    <color name="color_5">#f0f</color>
+    <color name="color_6">#0ff</color>
+    <color name="color_7">#f98</color>
+    <color name="color_8">#211</color>
+    <color name="color_9">#770</color>
+    <color name="color_10">#fff</color>
+
 </resources>
