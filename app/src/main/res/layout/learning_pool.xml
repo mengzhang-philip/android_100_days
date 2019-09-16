@@ -114,6 +114,14 @@
                 android:background="#3ff878"
                 android:text="Double Recycler View" />
 
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/go_to_unknow_view"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#3ff878"
+                android:text="Unknow View" />
+
             <AnalogClock
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>

@@ -113,6 +113,10 @@ public class LearningPoolActivity extends AppCompatActivity implements View.OnCl
                 break;
 
             case R.id.go_to_double_recycler_view:
+//                startActivity(new Intent(this, FrameLayoutActivity.class));
+                break;
+
+            case R.id.go_to_unknow_view:
                 startActivity(new Intent(this, FrameLayoutActivity.class));
                 break;
         }
