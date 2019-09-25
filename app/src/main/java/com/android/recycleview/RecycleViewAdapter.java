@@ -35,20 +35,22 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     @Override
     public int getItemViewType(int position) {
-        return position % 2;
+        return position;
     }
 
     @Override
     public RecycleViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view;
-        if (viewType == 1) {
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_rv_tall,
-                    parent, false);
-        } else {
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_rv_short,
-                    parent, false);
-        }
+//        if (viewType == 1) {
+//            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_rv_tall,
+//                    parent, false);
+//        } else {
+//            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_rv_short,
+//                    parent, false);
+//        }
+        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_view_item,
+                parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
@@ -106,13 +108,13 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView mLeftImgView,mRightImgView;
+        ImageView mLeftImgView, mRightImgView;
 
         public ViewHolder(View itemView) {
             super(itemView);
-//            mLeftImgView = (ImageView) itemView.findViewById(R.id.rv_left_img);
+            mLeftImgView = (ImageView) itemView.findViewById(R.id.left_img);
 //            mRightImgView = itemView.findViewById(R.id.rv_right_img);
-            mLeftImgView = itemView.findViewById(R.id.rv_img);
+//            mLeftImgView = itemView.findViewById(R.id.rv_img);
 //            mRightImgView = itemView.findViewById(R.id.right_img);
         }
     }

@@ -3,6 +3,7 @@ package com.android.recycleview;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
@@ -34,14 +35,17 @@ public class RecycleViewActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_recycle_view);
 //        setContentView(R.layout.view_rv_tall);
 //        setContentView(R.layout.view_rv_short);
+
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_IMMERSIVE);
         initData();
         initView();
     }
 
     private void initData() {
 //        mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-//        mLayoutManager = new GridLayoutManager(this,2, OrientationHelper.VERTICAL,false);
-        mLayoutManager = new StaggeredGridLayoutManager(2, OrientationHelper.VERTICAL);
+        mLayoutManager = new GridLayoutManager(this,2, OrientationHelper.VERTICAL,false);
+//        mLayoutManager = new StaggeredGridLayoutManager(2, OrientationHelper.VERTICAL);
         mRecycleAdapter = new RecycleViewAdapter(getData());
 
     }
@@ -66,7 +70,18 @@ public class RecycleViewActivity extends AppCompatActivity implements View.OnCli
         });
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mRecycleAdapter);
-        mRecyclerView.addItemDecoration(new MyDividerItemDecoration(this, LinearLayoutManager.HORIZONTAL));
+        mRecyclerView.addItemDecoration(new MDGridRvDividerDecoration(this));
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus){
+            View decorView = getWindow().getDecorView();
+            int status = View.SYSTEM_UI_FLAG_IMMERSIVE;
+            decorView.setSystemUiVisibility(status);
+        }
     }
 
     @Override

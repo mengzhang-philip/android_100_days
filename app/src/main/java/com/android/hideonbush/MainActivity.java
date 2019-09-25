@@ -1,5 +1,6 @@
 package com.android.hideonbush;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView txt_message;
     private TextView txt_game;
     private TextView txt_settings;
+    private MainActivity mainActivity;
 //    private FrameLayout ly_content;
 
     private Button mBtnGoToCustomPage, mBtnGoToLearningPool;
@@ -32,8 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_IMMERSIVE);
         fManager = getSupportFragmentManager();
         bindViews();
         txt_phone.performClick();   //模拟一次点击，既进去后选择第一项
@@ -77,6 +81,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txt_message.setSelected(false);
         txt_game.setSelected(false);
         txt_settings.setSelected(false);
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus){
+            View decorView = getWindow().getDecorView();
+            int status = View.SYSTEM_UI_FLAG_IMMERSIVE;
+            decorView.setSystemUiVisibility(status);
+        }
     }
 
     //隐藏所有Fragment

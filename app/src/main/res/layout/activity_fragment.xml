@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.android.fragmentactivity.FragmentActivity">
+
+    <RelativeLayout
+        android:id="@+id/wechat_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ededed">
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/add"
+            />
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="55dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/search"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/wechat_title_bar"
+        android:layout_above="@+id/div_line"
+        android:background="#FFFFFF"
+        android:id="@+id/fragment_content">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+<!--            <FrameLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:id="@+id/fragment_container"/>-->
+<!--        </android.support.v4.view.ViewPager>-->
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/div_line"
+        android:layout_above="@id/wechat_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d2d2d2"/>
+
+    <LinearLayout
+        android:id="@+id/wechat_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ededed"
+        >
+
+        <TextView
+            android:id="@+id/content_fragment_chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:drawableTop="@mipmap/content_fragment_chat"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="微信"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/content_fragment_contacts"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:drawableTop="@mipmap/content_fragment_contacts"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="通讯录"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/content_fragment_find"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:drawableTop="@mipmap/content_fragment_find"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="发现"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/content_fragment_me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:drawableTop="@mipmap/content_fragment_me"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="我"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -11,7 +11,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:text="小猪"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/color_7"
         android:textSize="18sp" />
 
     <TextView

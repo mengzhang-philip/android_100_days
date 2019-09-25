@@ -7,9 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
+import com.android.customrvwithanimator.CustomRvWithAnimator;
 import com.android.doublerecycleview.DoubleRecycleViewActivity;
 import com.android.flashlight.FrameLayoutActivity;
+import com.android.flipcard.FlipCardActivity;
 import com.android.followball.CustomView;
+import com.android.fragmentactivity.FragmentActivity;
 import com.android.hideonbush.R;
 import com.android.listview.ContactsListActivity;
 import com.android.listview.ListViewActivity;
@@ -25,7 +28,7 @@ public class LearningPoolActivity extends AppCompatActivity implements View.OnCl
 
     private Button mBtnGoToListView, mBtnGoToScrollView, mBtnGoToFragment, mBtnGoToRecycleView, mBtnGoToOrganicListView,
             mBtnGoToCRUD, mBtnGoToSRealcrollView , mBtnGoToWidget, mBtnGotoSharedPreferenece, mBtnDownLoadImg, mBtnGoToRecyclerView,
-            mBtnGoToDoubleRecyclerView;
+            mBtnGoToDoubleRecyclerView, mBtnGotoUnknownRotateView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +55,7 @@ public class LearningPoolActivity extends AppCompatActivity implements View.OnCl
         mBtnDownLoadImg = findViewById(R.id.go_to_download_img);
         mBtnGoToRecyclerView = findViewById(R.id.go_to_recycler_view);
         mBtnGoToDoubleRecyclerView = findViewById(R.id.go_to_double_recycler_view);
+        mBtnGotoUnknownRotateView = findViewById(R.id.go_to_unknow_view);
     }
 
     private void initListener() {
@@ -67,6 +71,7 @@ public class LearningPoolActivity extends AppCompatActivity implements View.OnCl
         mBtnDownLoadImg.setOnClickListener(this);
         mBtnGoToRecyclerView.setOnClickListener(this);
         mBtnGoToDoubleRecyclerView.setOnClickListener(this);
+        mBtnGotoUnknownRotateView.setOnClickListener(this);
     }
 
     @Override
@@ -113,11 +118,11 @@ public class LearningPoolActivity extends AppCompatActivity implements View.OnCl
                 break;
 
             case R.id.go_to_double_recycler_view:
-//                startActivity(new Intent(this, FrameLayoutActivity.class));
+                startActivity(new Intent(this, FragmentActivity.class));
                 break;
 
             case R.id.go_to_unknow_view:
-                startActivity(new Intent(this, FrameLayoutActivity.class));
+                startActivity(new Intent(this, FlipCardActivity.class));
                 break;
         }
     }
